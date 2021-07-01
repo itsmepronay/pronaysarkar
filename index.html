@@ -690,6 +690,21 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
+  <!-- IBM Chatbit -->
+  <script>
+    window.watsonAssistantChatOptions = {
+        integrationID: "51ee873c-fb8d-4b62-9511-2e0ed0f95265", // The ID of this integration.
+        region: "eu-gb", // The region your integration is hosted in.
+        serviceInstanceID: "c4ecc991-e08d-44b5-b232-5a7ced19e2f0", // The ID of your service instance.
+        onLoad: function(instance) { instance.render(); }
+      };
+    setTimeout(function(){
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+      document.head.appendChild(t);
+    });
+  </script>
+
 </body>
 
 </html>
